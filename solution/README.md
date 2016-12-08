@@ -12,7 +12,7 @@ So just run:
   $ python3 run_tests.py
 ```
 
-### How to Use:
+## How to Use:
 
 Run the Main program:
 
