@@ -1,5 +1,6 @@
 import unittest
-from tests.main import DeveloperTestCase
+from tests.DeveloperTest import DeveloperTestCase
+from tests.PairTest import PairTestCase
 
 if __name__ == '__main__':
     unittest.main()
