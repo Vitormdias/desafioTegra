@@ -1,3 +1,6 @@
+Tegra Pair
+==========
+
 ## A small program to draft Developer Pairs, for Pair Programming
 
 ## How to Test
