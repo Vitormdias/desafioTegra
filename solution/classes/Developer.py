@@ -4,4 +4,4 @@ class Developer():
         self.experience = experience
 
     def presentation(self):
-        return "Hello I am {0!s} and I am a {1!s}".format(self.name ,self.experience)
+        return "Ola sou {0!s} e sou um {1!s}".format(self.name ,self.experience)
