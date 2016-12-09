@@ -1,5 +1,5 @@
 import unittest
-from classes.Developer import Developer
+from models.Developer import Developer
 
 class DeveloperTestCase(unittest.TestCase):
     def setUp(self):

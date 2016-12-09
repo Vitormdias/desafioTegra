@@ -1,6 +1,6 @@
 import unittest
-from classes.Developer import Developer
-from classes.Pair import Pair
+from models.Developer import Developer
+from models.Pair import Pair
 
 class PairTestCase(unittest.TestCase):
     def setUp(self):
