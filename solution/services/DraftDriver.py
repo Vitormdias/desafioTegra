@@ -11,6 +11,7 @@ def draftDriver():
     return random.choice(poolDrivers)
 
 def populatePoolDrivers():
+    poolDrivers.clear()
     settings.setProbabilities(0.4 , 0.4 , 0.1 , 0.1)
 
     for dev in developers:

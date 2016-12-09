@@ -14,6 +14,7 @@ def draftNavigator(driver):
     return random.choice(poolNavigators)
 
 def populatePoolNavigators():
+    poolNavigators.clear()
     if gblDriver.experience == 'Estagiario':
         settings.setProbabilities(0.0 , 0.2 , 0.4 , 0.4)
     elif gblDriver.experience == 'Junior':
