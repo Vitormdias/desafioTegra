@@ -8,7 +8,11 @@ poolDrivers = []
 
 def draftDriver():
     populatePoolDrivers()
-    return random.choice(poolDrivers)
+
+    try:
+        return random.choice(poolDrivers)
+    except Exception as e:
+        print("No developers available")
 
 def populatePoolDrivers():
     poolDrivers.clear()

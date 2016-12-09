@@ -1,5 +1,6 @@
 import random
 import settings
+import sys
 from . import Developers
 
 developers = Developers.developers
@@ -11,7 +12,12 @@ def draftNavigator(driver):
     gblDriver = driver
 
     populatePoolNavigators()
-    return random.choice(poolNavigators)
+
+    try:
+        return random.choice(poolNavigators)
+    except Exception as e:
+        print("No developers available")
+
 
 def populatePoolNavigators():
     poolNavigators.clear()
