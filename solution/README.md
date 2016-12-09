@@ -14,7 +14,7 @@ Tegra Pair
 
 ## How to Test
 
-There are already some automatized tests
+There are already some small automatized tests
 
 So just run:
 
