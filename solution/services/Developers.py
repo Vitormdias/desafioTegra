@@ -7,6 +7,4 @@ def addDev(name , function):
 
     developers.append(developer)
 
-def show():
-    for dev in developers:
-        print (dev.presentation())
+    print (developer.presentation())

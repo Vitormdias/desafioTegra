@@ -6,11 +6,10 @@ from subprocess import call
 def add():
     print('Name: ')
     name = str(input())
-    print('Function: ')
+    print('Experience: ')
     function = str(input())
 
     Developers.addDev(name , function)
-    Developers.show()
 
 print ("\t\t\tPair Programming Draft")
 
