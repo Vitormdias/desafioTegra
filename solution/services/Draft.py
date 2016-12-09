@@ -1,4 +1,4 @@
-from classes.Pair import Pair
+from models.Pair import Pair
 from . import DraftDriver
 from . import DraftNavigator
 

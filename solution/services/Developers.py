@@ -1,4 +1,4 @@
-from classes.Developer import Developer
+from models.Developer import Developer
 
 developers = []
 
