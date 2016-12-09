@@ -4,4 +4,4 @@ class Pair():
         self.navigator = navigator
 
     def presentation(self):
-        return "{0!s} eh o Driver e {1!s} eh o Navigator".format(self.driver.name , self.navigator.name)
+        return "Driver: {0!s} Navigator: {1!s}".format(self.driver.name , self.navigator.name)
