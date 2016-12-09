@@ -10,7 +10,7 @@ class PairTestCase(unittest.TestCase):
         self.pair = Pair(self.developer1 , self.developer2)
 
     def test_presentation(self):
-        expected = "Driver: vitor Navigator: lucas"
+        expected = "Driver: Vitor Navigator: Lucas"
         self.assertEqual(expected, self.pair.presentation())
 
 if __name__ == '__main__':

@@ -6,7 +6,7 @@ class DeveloperTestCase(unittest.TestCase):
         self.developer = Developer("Vitor","Estagiario")
 
     def test_presentation(self):
-        expected = "Name: vitor Experience: estagiario"
+        expected = "Name: Vitor Experience: Estagiario"
         self.assertEqual(expected, self.developer.presentation())
 
 if __name__ == '__main__':
