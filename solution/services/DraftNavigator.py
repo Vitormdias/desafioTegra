@@ -29,7 +29,7 @@ def populatePoolNavigators():
             settings.added[dev.experience] += 1
 
 def canIAdd(dev):
-    condition = dev != gblDriver #and dev not in pairs
+    condition = dev != gblDriver and not settings.devInPairs(dev)
     condition = condition and settings.added[dev.experience] < developers.__len__() * settings.probabilities[dev.experience]
 
     return condition

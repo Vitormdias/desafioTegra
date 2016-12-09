@@ -13,3 +13,9 @@ def setProbabilities(eP , jP , pP , sP):
     added['Junior'] = 0
     added['Pleno'] = 0
     added['Senior'] = 0
+
+def devInPairs (dev):
+    for p in pairs:
+        if dev == p.driver or dev == p.navigator:
+            return True
+    return False

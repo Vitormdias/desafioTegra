@@ -20,4 +20,4 @@ def populatePoolDrivers():
 
 
 def canIAdd(dev):
-    return settings.added[dev.experience] < developers.__len__() * settings.probabilities[dev.experience] #and dev not in pairs
+    return settings.added[dev.experience] < developers.__len__() * settings.probabilities[dev.experience] and not settings.devInPairs(dev)
