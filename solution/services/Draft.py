@@ -12,4 +12,7 @@ def draft():
 
     settings.pairs.append(pair)
 
-    print (pair.presentation())
+    try:
+        print (pair.presentation())
+    except Exception as e:
+        print("Draft aborted")
