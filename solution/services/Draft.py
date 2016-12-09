@@ -1,8 +1,7 @@
 from models.Pair import Pair
 from . import DraftDriver
 from . import DraftNavigator
-
-pairs = []
+import settings
 
 def draft():
 
@@ -11,6 +10,6 @@ def draft():
 
     pair = Pair(driver , navigator)
 
-    pairs.append(pair)
+    settings.pairs.append(pair)
 
     print (pair.presentation())
