@@ -3,6 +3,8 @@ pairs = []
 added = {}
 probabilities = {}
 
+options = {}
+
 def setProbabilities(eP , jP , pP , sP):
     probabilities['Estagiario'] = eP
     probabilities['Junior'] = jP
@@ -19,3 +21,9 @@ def devInPairs (dev):
         if dev == p.driver or dev == p.navigator:
             return True
     return False
+
+def setOptions(ops):
+    index = 1
+    for op in ops:
+        options[index] = op
+        index += 1
