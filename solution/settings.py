@@ -1,20 +1,21 @@
 pairs = []
-
-added = {}
-probabilities = {}
+probabilities = []
+added = []
 
 options = {}
 
-def setProbabilities(eP , jP , pP , sP):
-    probabilities['Estagiario'] = eP
-    probabilities['Junior'] = jP
-    probabilities['Pleno'] = pP
-    probabilities['Senior'] = sP
+probabilities.append([0.4 , 0.4 , 0.1 , 0.1])
+probabilities.append([0.0 , 0.2 , 0.4 , 0.4])
+probabilities.append([0.05 , 0.05 , 0.15 , 0.75])
+probabilities.append([0.4 , 0.3 , 0.1 , 0.2])
+probabilities.append([0.2 , 0.6 , 0.15 , 0.05])
 
-    added['Estagiario'] = 0
-    added['Junior'] = 0
-    added['Pleno'] = 0
-    added['Senior'] = 0
+def setProbabilities(exp):
+    return probabilities[exp]
+
+def setAdded():
+    added = [0] * (options.__len__()+1)
+    return added
 
 def devInPairs (dev):
     for p in pairs:

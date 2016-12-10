@@ -21,22 +21,24 @@ def draftNavigator(driver):
 
 def populatePoolNavigators():
     poolNavigators.clear()
-    if gblDriver.experience == 'Estagiario':
-        settings.setProbabilities(0.0 , 0.2 , 0.4 , 0.4)
-    elif gblDriver.experience == 'Junior':
-        settings.setProbabilities(0.05 , 0.05 , 0.15 , 0.75)
-    elif gblDriver.experience == 'Pleno':
-        settings.setProbabilities(0.4 , 0.3 , 0.1 , 0.2)
-    else:
-        settings.setProbabilities(0.2 , 0.6 , 0.15 , 0.05)
+
+    global added
+    added = settings.setAdded()
 
     for dev in developers:
-        if canIAdd(dev):
+        if  canIAdd(dev):
+            added[dev.experience] += 1
             poolNavigators.append(dev)
-            settings.added[dev.experience] += 1
 
 def canIAdd(dev):
-    condition = dev != gblDriver and not settings.devInPairs(dev)
-    condition = condition and settings.added[dev.experience] < developers.__len__() * settings.probabilities[dev.experience]
+    probabilities = settings.setProbabilities(dev.experience)
 
-    return condition
+    devProb = developers.__len__() * probabilities[dev.experience - 1]
+
+    conditions = []
+
+    conditions.append(dev != gblDriver)
+    conditions.append(not settings.devInPairs(dev))
+    conditions.append(added[dev.experience] < devProb)
+
+    return sum(conditions) == conditions.__len__()

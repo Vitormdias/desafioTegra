@@ -16,13 +16,24 @@ def draftDriver():
 
 def populatePoolDrivers():
     poolDrivers.clear()
-    settings.setProbabilities(0.4 , 0.4 , 0.1 , 0.1)
+    
+    global added
+    added = settings.setAdded()
 
     for dev in developers:
         if canIAdd(dev):
             poolDrivers.append(dev)
-            settings.added[dev.experience] += 1
+            added[dev.experience] += 1
 
 
 def canIAdd(dev):
-    return settings.added[dev.experience] < developers.__len__() * settings.probabilities[dev.experience] and not settings.devInPairs(dev)
+    probabilities = settings.setProbabilities(0)
+
+    devProb = developers.__len__() * probabilities[dev.experience-1]
+
+    conditions = []
+
+    conditions.append(not settings.devInPairs(dev))
+    conditions.append(added[dev.experience] < devProb)
+
+    return sum(conditions) == conditions.__len__()
