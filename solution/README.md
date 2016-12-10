@@ -10,20 +10,20 @@ Instructions
   $ cd desafioTegra
 ```
 
-## How to Test
-
-There are already some small automatized tests
-
-So just run:
-
-```
-  $ python3 run_tests.py
-```
-
 ## How to Use:
 
 Run the Main program:
 
 ```
   $ python3 pair_programming_draft.py
+```
+
+## How to Test
+
+There are also some small automatized tests
+
+Just run:
+
+```
+  $ python3 run_tests.py
 ```
