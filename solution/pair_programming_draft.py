@@ -12,11 +12,9 @@ def add():
     print('Experience: ')
     print ("\tSelect an Option")
 
-    it = 1
-    for op in ops:
-        print ("{0} - {1!s}".format(it , op))
-        it += 1
-        
+    for it , op in enumerate(ops):
+        print ("{0} - {1!s}".format(it+1 , op))
+
     function = int(input())
 
     Developers.addDev(name , function)
@@ -30,7 +28,7 @@ if __name__ == '__main__':
         print ("\tSelect an Option")
         print ("\t\t\t1 - Add Developer")
         print ("\t\t\t2 - Draft Me A Pair")
-        print ("\t\t\t3 - Let's Put Our Hands On")
+        print ("\t\t\t3 - Hands On")
 
         option = int(input())
 
