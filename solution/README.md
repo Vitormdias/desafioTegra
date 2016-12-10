@@ -1,7 +1,5 @@
-Tegra Pair
+Instructions
 ==========
-
-## A small program to draft Developer Pairs, for Pair Programming
 
 ## First thing:
 
